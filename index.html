@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tiệm Trà & Bánh GenZ</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">SWEET & TEA</div>
+        <ul class="nav-links">1 
+            <li><a href="#home">Trang chủ</a></li>
+            <li><a href="#about">Đội ngũ</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#cart-section">Giỏ hàng (<span id="cart-count">0</span>)</a></li>
+        </ul>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Hương Vị Ngọt Ngào, Tươi Mát</h1>
+            <p>Trà sữa, Hồng trà & Bánh ngọt thủ công mỗi ngày</p>
+            <a href="#menu" class="btn-main">Khám phá ngay</a>
+        </div>
+    </section>
+
+    <section id="about" class="container">
+        <h2 class="section-title">Đội Ngũ Của Chúng Tôi</h2>
+        <div class="team-grid">
+            <div class="team-card">
+                <img src="./2b50e790-cbfc-429f-8474-8104b1ebdf06 (1).jpg" alt="Member">
+                <h3>võ thị như ngọc</h3>
+                <p>Founder & Chuyên gia pha chế</p>
+            </div>
+            <div class="team-card">
+                <img src="./5adbecf7-a7b2-4838-8170-93a7438d325d.jpg" alt="Member">
+                <h3> trần thiện trăm </h3>
+                <p>Thợ bánh chính</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="menu" class="container">
+        <h2 class="section-title">Thực Đơn Cửa Hàng</h2>
+        
+        <div class="category-filter">
+            <button onclick="filterMenu('all')">Tất cả</button>
+            <button onclick="filterMenu('milktea')">Trà sữa</button>
+            <button onclick="filterMenu('blacktea')">Hồng trà</button>
+            <button onclick="filterMenu('matcha')">Matcha Latte</button>
+            <button onclick="filterMenu('cake')">Bánh ngọt</button>
+        </div>
+
+        <div class="product-grid" id="product-list">
+            </div>
+    </section>
+
+    <section id="cart-section" class="container">
+        <h2 class="section-title">Giỏ Hàng Của Bạn</h2>
+        <div class="cart-wrapper">
+            <div id="cart-items-list">
+                </div>
+            <div class="cart-footer">
+                <div class="total-price">Tổng cộng: <span id="cart-total">0</span>đ</div>
+                <div class="cart-actions">
+                    <button class="btn-clear" onclick="clearCart()">Xóa tất cả</button>
+                    <button class="btn-checkout" onclick="openCheckout()">Thanh toán</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="checkout-modal" class="modal">
+        <div class="modal-content">
+            <h3>Xác nhận Đơn Hàng</h3>
+            <input type="text" id="cust-name" placeholder="Tên khách hàng">
+            <input type="text" id="cust-phone" placeholder="Số điện thoại">
+            <p>Phương thức: Thanh toán khi nhận hàng (COD)</p>
+            <button class="btn-main" onclick="confirmOrder()">Đặt hàng ngay</button>
+            <button onclick="closeCheckout()">Đóng</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
